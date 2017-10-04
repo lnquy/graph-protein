@@ -1,0 +1,8 @@
+mutation {
+	schema {
+        protein.eid: uid @index(exact) .
+		protein.name: string @index(term, fulltext, trigram) .
+		protein.full_name: string @index(term, fulltext, trigram) .
+		protein.interaction: uid @index(exact) .
+    }
+}
